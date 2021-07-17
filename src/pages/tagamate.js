@@ -2,11 +2,8 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Seo from "../components/seo"
 import PageLayout from "../components/pageLayout.js"
-import Kv from "../components/main/kv.js"
-import Nature from "../components/main/nature.js"
-import Tour from "../components/main/tour.js"
-import People from "../components/main/people.js"
-import Area from "../components/main/area.js"
+import Kv from "../components/tagamate/kv.js"
+import People from "../components/tagamate/people.js"
 
 const Home = () => {
 
@@ -14,10 +11,7 @@ const Home = () => {
     <PageLayout>
         <Seo title="Tagame City Tourism Association" />
         <Kv />
-        <Nature />
-        <Tour/>
-        <People/>
-        <Area/>
+        <People />
         <div style={{height:'100px'}} />
     </PageLayout>
   )

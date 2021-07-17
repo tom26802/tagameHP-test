@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `田瓶市観光情報局`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `田瓶市観光協会`,
+      summary: `北関東の郊外都市　田瓶市の広報部`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `田瓶の観光情報を発信するサイト`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `kylemathews`,
