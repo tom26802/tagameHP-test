@@ -1,13 +1,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = '田瓶ニュース'
   const { previous, next } = data
 
   return (
@@ -30,9 +29,6 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
       <nav className="blog-post-nav">
         <ul

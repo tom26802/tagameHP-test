@@ -1,32 +1,18 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import styled from 'styled-components';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
+import Layout from "../components/blogLayout"
 import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = "田瓶ニュース"
+  const siteText ="田瓶市のイマをお届けするホットなニュースです。"
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} text={siteText}>
       <Seo title="All posts" />
-      <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -59,11 +45,25 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <DLast>
+        <p>このニュースコンテンツは毛総新聞社により提供されています。</p>
+        <p>更新情報は田瓶市観光協会のTiwitterで随時配信中です。</p>
+      </DLast>
     </Layout>
   )
 }
 
 export default BlogIndex
+
+const DLast = styled.div`
+  border: 1px dashed;
+  padding:16px;
+  margin-top:50px;
+  
+  > p {
+    margin:8px;
+  }
+`
 
 export const pageQuery = graphql`
   query {
