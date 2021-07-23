@@ -4,12 +4,12 @@ import Header from "./header.js"
 import Footer from "./footer.js"
 import {CWhite, CBlack} from './common/common.js'
 
-const PageLayout = ({children}) => {
+const PageLayout = (props) => {
      return(
         <>
             <Header />
-            <SMain>
-                {children}
+            <SMain Backcolor={props.isBackcolor}>
+                {props.children}
             </SMain>
             <Footer />
         </>
@@ -20,7 +20,7 @@ const SMain = styled.div`
     font-family: 'Noto Serif JP', serif;
     color:darkslategray;
     max-width:1400px;
-    background-color:${CWhite};
+    background-color:${props=>props.Backcolor ? props.Backcolor : CWhite};
     color:${CBlack};
 
 `
