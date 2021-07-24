@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'styled-components';
 import Header from "./header.js"
 import Footer from "./footer.js"
-import {CWhite, CBlack} from './common/common.js'
+import {CWhite, CBlack} from './common/variables.js'
 
 const PageLayout = (props) => {
      return(

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-import {SAdiv, CWhite, CNavy} from './common/common.js'
+import {SAdiv} from './common/div.js'
+import {CWhite, CNavy} from './common/variables.js'
 
 const Footer = () => {
     return(

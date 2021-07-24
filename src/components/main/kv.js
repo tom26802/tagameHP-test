@@ -5,8 +5,10 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import PageviewIcon from '@material-ui/icons/Pageview';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import Img1 from '../../images/index/kv/top.jpg'
-import {SSection, SRdiv, CWhite, CBeige} from '../common/common.js'
-
+import {SRdiv} from '../common/div.js'
+import {SSection} from '../common/section.js'
+import {CWhite, CBeige} from '../common/variables.js'
+import {STopX, STopY} from '../common/kvmsg.js'
 
 const Kv = () => {
     return (
@@ -60,31 +62,6 @@ const Kv = () => {
 
 
 
-const STopX = styled.div`
-    margin:0 0 24px 24px;
-    
-    > p {
-        margin-bottom:0;
-        padding-left:8px;
-    }
-    
-    > div {
-        font-size:2rem;
-        font-weight:bold;
-    }
-`
-
-const STopY = styled.div`
-    margin: 0 auto;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    
-    >div {
-        font-size:2rem;
-        font-weight:bold;
-        padding-top:16px;
-    }
-`
 
 const SLinkwap= styled.div`
     text-align:center;

@@ -1,7 +1,9 @@
 import React from "react"
 import styled from 'styled-components';
 import {Grid } from '@material-ui/core';
-import {SSection, SSectionTitle, SCover,SCredit, SSectionDiscription} from '../common/common.js'
+import {SCover} from '../common/div.js'
+import {SSection, SCopy} from '../common/section.js'
+import {SSideTitle} from '../common/sidetitle.js'
 import Img1 from '../../images/index/tour/tour_1_see.jpg'
 import Img2 from '../../images/index/tour/tour_2_activty.jpg'
 import Img3 from '../../images/index/tour/tour_3_food.jpg'
@@ -11,14 +13,15 @@ import Img5 from '../../images/index/tour/tour_5_event.jpg'
 const Tour= () => {
     return (
         <SSection>
-            <SSectionTitle>田瓶の魅力</SSectionTitle>
+        
+            <h1>田瓶の魅力</h1>
             <Grid container>
                 <Grid item xs={9}>
-                    <SSectionDiscription>
+                    <SCopy>
                         真殿山と赤川が織りなす大自然<br />
                         古来から続く信仰と文化が創り出した史跡と郷土料理<br />
                         訪れる人すべての心と身体を癒す憩いの場所
-                    </SSectionDiscription>
+                    </SCopy>
                 
                     <SMenu>
                         <img src={Img1} alt="see"　style={{width:'100%',display: 'block'}}/>
@@ -62,12 +65,11 @@ const Tour= () => {
                     </SMenu>
                 </Grid>
                 <Grid item xs={3}>
-                    <SCredit>
-                        <ul>
+                    <SSideTitle><ul>
                             <li><span>Dreaming of TAGAME City</span></li>
                             <li><p>田瓶で過ごすひととき</p></li>
                         </ul>
-                    </SCredit>
+                    </SSideTitle>
                 </Grid>
             </Grid>
         </SSection>

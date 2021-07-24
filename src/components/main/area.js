@@ -1,20 +1,21 @@
 import React from "react"
 import styled from 'styled-components';
 import {Grid } from '@material-ui/core';
-import {SSection, SSectionTitle, SSectionDiscription, SCredit} from '../common/common.js'
+import {SSection, SCopy} from '../common/section.js'
+import {SSideTitle} from '../common/sidetitle.js'
 import Img1 from '../../images/index/area/map.png'
 
 const Area = () => {
     return (
         <SSection>
-            <SSectionTitle>田瓶の地を知る</SSectionTitle>
+            <h1>田瓶の地を知る</h1>
             <Grid container>
                 <Grid item xs={10}>
-                    <SSectionDiscription>
+                    <SCopy>
                         山梨と群馬の県境に位置する田瓶<br />
                         駅前の繁華街を抜ければ大自然が広がるエリアに直結する<br />
                         大正時代から残るレトロな街並みもコアな魅力のひとつ
-                    </SSectionDiscription>
+                    </SCopy>
                     <Grid container>
                         <Grid item xs={12} md={6}>
                             <img src={Img1} alt="top"　style={{width:'90%', margin:'5%'}}/>
@@ -54,13 +55,13 @@ const Area = () => {
                     </Grid>
                 </Grid>
                 <Grid item xs={2}>
-                    <SCredit>
+                    <SSideTitle>
                         <ul>
                             <li>　</li>
                             <li><span>Dream​Quest of Unknown TAGAME</span></li>
                             <li><p>特色豊かな田瓶の地理</p></li>
                         </ul>
-                    </SCredit>
+                    </SSideTitle>
                 </Grid>
             </Grid>
 

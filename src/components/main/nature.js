@@ -1,16 +1,18 @@
 import React from "react"
 import styled from 'styled-components';
 import {Grid} from '@material-ui/core';
+import {CBlack} from '../common/variables.js'
+import {SSection} from '../common/section.js'
+import {SRdiv, SAdiv, SCover} from '../common/div.js'
 import Img1 from '../../images/index/nature/step.jpg'
 import Img2 from '../../images/index/nature/flower.jpg'
 import Img3 from '../../images/index/nature/cat.jpg'
 import Img4 from '../../images/index/nature/river.jpg'
-import {SSection, SSectionTitle, SCover, SRdiv, SAdiv, CBlack} from '../common/common.js'
 
 const Nature = () => {
     return (
         <SSection>
-            <SSectionTitle>田瓶の情景</SSectionTitle>
+            <h1>田瓶の情景</h1>
             <Grid container>
                 <Grid item xs={12} md={8}>
                     <SRdiv>

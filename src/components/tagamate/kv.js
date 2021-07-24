@@ -2,7 +2,8 @@ import React from "react"
 import styled from 'styled-components';
 import {Grid, Hidden } from '@material-ui/core';
 import Img1 from '../../images/index/kv/top.jpg'
-import {SSection } from '../common/common.js'
+import {SSection } from '../common/section.js'
+import {STopX, STopY } from '../common/kvmsg.js'
 
 const Kv = () => {
     return (
@@ -11,7 +12,7 @@ const Kv = () => {
                 <STopX>
                     <p>人と人とが触れ合うと</p>
                     <p>いつしか暖かい街になる</p>
-                    <div>田瓶の人通じて知る世界</div>
+                    <div>人通じて知る世界</div>
                 </STopX>
             </Hidden>
             <Grid container>
@@ -23,7 +24,7 @@ const Kv = () => {
                         <STopY>
                             <p>人と人とが触れ合うと</p>
                             <p>いつしか暖かい街になる</p>
-                            <div> 田瓶の人通じて知る世界</div>
+                            <div> 人を通じて知る世界</div>
                         </STopY>
                     </Grid>
                 </Hidden>
@@ -32,32 +33,5 @@ const Kv = () => {
     )
 }
 
-
-
-const STopX = styled.div`
-    margin:0 0 24px 24px;
-    
-    > p {
-        margin-bottom:0;
-        padding-left:8px;
-    }
-    
-    > div {
-        font-size:2rem;
-        font-weight:bold;
-    }
-`
-
-const STopY = styled.div`
-    margin: 0 auto;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    
-    >div {
-        font-size:2rem;
-        font-weight:bold;
-        padding-top:16px;
-    }
-`
 
 export default Kv

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from 'styled-components';
 import PageLayout from "../components/pageLayout"
 import {Grid } from '@material-ui/core';
-import {SSection} from '../components/common/common.js'
+import {SSection} from '../components/common/section.js'
 import Img from "gatsby-image"
 
 const TagamateTemplate = ({ data, location }) => {

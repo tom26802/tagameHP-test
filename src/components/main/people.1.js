@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import {Grid } from '@material-ui/core';
-import {SSideTitle} from '../common/sidetitle.js'
-import {SSection, SCopy} from '../common/section.js'
+import {SSectionTitle, SCredit, SSectionDiscription} from '../common/common.js'
+import {SSection} from '../common/section.js'
 import Img1 from '../../images/index/people/yago.jpg'
 import Img2 from '../../images/index/people/etori.jpg'
 import Img3 from '../../images/index/people/hashimoto.jpg'
@@ -75,23 +75,23 @@ const Tagamate = ({img, title, message, name, roman})=>{
 
 const People= () => {
     return (
-        <SSection right>
-            <h1>田瓶の人に会う</h1>
+        <SSection>
+            <SSectionTitle right>田瓶の人に会う</SSectionTitle>
             <Grid container>
                 <Grid item xs={3}>
-                    <SSideTitle>
+                    <SCredit>
                         <ul>
                             <li><p>独特の文化が育む人間模様</p></li>
                             <li><span>Story of TAGAMATE</span></li>
                         </ul>
-                    </SSideTitle>
+                    </SCredit>
                 </Grid>
                 <Grid item xs={9}>
-                    <SCopy right>
+                    <SSectionDiscription right>
                         江戸時代から続く匠の技<br />
                         郊外のゆとりが育む感性<br />
                         夢見る神の子が作る街
-                    </SCopy>
+                    </SSectionDiscription>
                     <Grid container>
                         {Tagamates.map((item)=>{
                             return(
