@@ -56,7 +56,7 @@ const Tagamates = [
     ]
     
 const Tagamate = ({img, title, message, name, roman})=>{
-    console.log(img)
+
     return(
         <Grid item xs={12} sm={6} lg={4}>
             <Link to={'/tagamate'+`/${roman.split(' ').pop()}/`}>
@@ -99,7 +99,6 @@ const People= () => {
                         })}
                     </Grid>
                 </Grid>
-
             </Grid>
         </SSection>
     )
