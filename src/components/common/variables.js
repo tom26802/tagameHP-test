@@ -1,4 +1,3 @@
-import React from 'react'
 
 export const CWhite='#F3F1F1'
 //'#EBE7E8'

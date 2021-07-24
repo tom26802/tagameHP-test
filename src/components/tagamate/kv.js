@@ -1,5 +1,4 @@
 import React from "react"
-import styled from 'styled-components';
 import {Grid, Hidden } from '@material-ui/core';
 import Img1 from '../../images/index/kv/top.jpg'
 import {SSection } from '../common/section.js'

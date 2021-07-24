@@ -4,7 +4,7 @@ import {Grid, Hidden } from '@material-ui/core';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PageviewIcon from '@material-ui/icons/Pageview';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
-import Img1 from '../../images/index/kv/top.jpg'
+import { StaticImage } from "gatsby-plugin-image"
 import {SRdiv} from '../common/div.js'
 import {SSection} from '../common/section.js'
 import {CWhite, CBeige} from '../common/variables.js'
@@ -23,7 +23,7 @@ const Kv = () => {
             <Grid container>
                 <Grid item xs={12} md={10}>
                     <SRdiv>
-                        <img src={Img1} alt="top"　style={{width:'100%'}}/>
+                        <StaticImage src='../../images/index/kv/top.jpg' alt='top'/>
                         <Hidden smDown>
                             <SLinkwap>
                                 <Grid container spacing={2} alignItems="center">
@@ -87,3 +87,4 @@ const SLink = styled.div`
 `
 
 export default Kv
+

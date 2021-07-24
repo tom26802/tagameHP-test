@@ -4,10 +4,7 @@ import {Grid} from '@material-ui/core';
 import {CBlack} from '../common/variables.js'
 import {SSection} from '../common/section.js'
 import {SRdiv, SAdiv, SCover} from '../common/div.js'
-import Img1 from '../../images/index/nature/step.jpg'
-import Img2 from '../../images/index/nature/flower.jpg'
-import Img3 from '../../images/index/nature/cat.jpg'
-import Img4 from '../../images/index/nature/river.jpg'
+import { StaticImage } from "gatsby-plugin-image"
 
 const Nature = () => {
     return (
@@ -17,12 +14,12 @@ const Nature = () => {
                 <Grid item xs={12} md={8}>
                     <SRdiv>
                         <Grid container>
-                            <Grid item xs={6}><img src={Img1} alt="river"　style={{width:'100%', display: 'block'}}/></Grid>
-                            <Grid item xs={6}><img src={Img2} alt="flower"　style={{width:'100%', display: 'block'}}/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/step.jpg' alt="river"/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/flower.jpg' alt="flower"/></Grid>
                         </Grid>
                         <Grid container>
-                            <Grid item xs={6}><img src={Img3} alt="cat"　style={{width:'100%', display: 'block'}}/></Grid>
-                            <Grid item xs={6}><img src={Img4} alt="river"　style={{width:'100%',display: 'block'}}/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/cat.jpg' alt="cat"/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/river.jpg' alt="cat"/></Grid>
                         </Grid>
                         <SCover/>
                         <Skv>

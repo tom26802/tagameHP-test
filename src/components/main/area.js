@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {Grid } from '@material-ui/core';
 import {SSection, SCopy} from '../common/section.js'
 import {SSideTitle} from '../common/sidetitle.js'
-import Img1 from '../../images/index/area/map.png'
+import { StaticImage } from "gatsby-plugin-image"
 
 const Area = () => {
     return (
@@ -18,7 +18,7 @@ const Area = () => {
                     </SCopy>
                     <Grid container>
                         <Grid item xs={12} md={6}>
-                            <img src={Img1} alt="top"　style={{width:'90%', margin:'5%'}}/>
+                            <StaticImage src="../../images/index/area/map.png" alt="map"/>
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <div style={{margin:'10%'}}>

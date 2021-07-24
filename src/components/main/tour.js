@@ -4,11 +4,8 @@ import {Grid } from '@material-ui/core';
 import {SCover} from '../common/div.js'
 import {SSection, SCopy} from '../common/section.js'
 import {SSideTitle} from '../common/sidetitle.js'
-import Img1 from '../../images/index/tour/tour_1_see.jpg'
-import Img2 from '../../images/index/tour/tour_2_activty.jpg'
-import Img3 from '../../images/index/tour/tour_3_food.jpg'
-import Img4 from '../../images/index/tour/tour_4_hotel.jpg'
-import Img5 from '../../images/index/tour/tour_5_event.jpg'
+import { StaticImage } from "gatsby-plugin-image"
+
 
 const Tour= () => {
     return (
@@ -24,7 +21,7 @@ const Tour= () => {
                     </SCopy>
                 
                     <SMenu>
-                        <img src={Img1} alt="see"　style={{width:'100%',display: 'block'}}/>
+                        <StaticImage src='../../images/index/tour/tour_1_see.jpg' alt="see"/>
                         <SCover />
                         <SMenuMessage>
                             <span>SightSeeing</span>
@@ -32,7 +29,7 @@ const Tour= () => {
                         </SMenuMessage>
                     </SMenu>
                     <SMenu>
-                        <img src={Img2} alt="activity"　style={{width:'100%',display: 'block'}}/>
+                        <StaticImage src='../../images/index/tour/tour_2_activty.jpg' alt="act"/>
                         <SCover />
                         <SMenuMessage>
                             <span>Activity</span>
@@ -40,7 +37,7 @@ const Tour= () => {
                         </SMenuMessage>
                     </SMenu>
                     <SMenu>
-                        <img src={Img3} alt="food"　style={{width:'100%',display: 'block'}}/>
+                        <StaticImage src='../../images/index/tour/tour_3_food.jpg' alt="food"/>
                         <SCover />
                         <SMenuMessage>
                             <span>Goumet & Souvenir</span>
@@ -48,7 +45,7 @@ const Tour= () => {
                         </SMenuMessage>
                     </SMenu>
                     <SMenu>
-                        <img src={Img4} alt="hotel"　style={{width:'100%',display: 'block'}}/>
+                        <StaticImage src='../../images/index/tour/tour_4_hotel.jpg' alt="hotel"/>
                         <SCover />
                         <SMenuMessage>
                             <span>Hotel & Spa</span>
@@ -56,7 +53,7 @@ const Tour= () => {
                         </SMenuMessage>
                     </SMenu>
                     <SMenu>
-                        <img src={Img5} alt="hotel"　style={{width:'100%',display: 'block'}}/>
+                        <StaticImage src='../../images/index/tour/tour_5_event.jpg' alt="event"/>
                         <SCover />
                         <SMenuMessage>
                             <span>Events</span>

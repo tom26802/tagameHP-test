@@ -108,7 +108,7 @@ const Tagamate = ({img, title, message, name, roman})=>{
     console.log(img)
     return(
         <Grid item xs={12} sm={6} lg={4}>
-            <Link to={'/tagamate'+`/${roman.split(' ').pop()}/`}>
+            <Link to={`/tagamate/${roman.split(' ').pop()}/`}>
                 <SPeopleWrap>
                     <img src={img} alt={roman}/>
                         <div>{title}</div>
