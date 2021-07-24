@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import {Grid } from '@material-ui/core';
-import {SSection, SSectionTitle,SCredit, SSectionDiscription} from '../common/common.js'
+import {SSection} from '../common/common.js'
 import Img1 from '../../images/index/people/yago.jpg'
 import Img2 from '../../images/index/people/etori.jpg'
 import Img3 from '../../images/index/people/hashimoto.jpg'
@@ -140,6 +140,98 @@ const SPeopleWrap=styled.div`
         padding-left:16px;
     }
 `
+
+//ここから
+const SSectionDiscriptionStyle = styled.div`
+    margin-bottom:24px;
+    padding-left:10%;
+    padding-right:10%;
+    
+    text-align: ${props=>props.right ? 'right' : 'left'};
+    
+    @media (min-width: 600px) {
+        font-size:1.2rem;
+    }
+`
+
+export const SSectionDiscription = (props)=>{
+
+    return(
+        <SSectionDiscriptionStyle right={props.right}>
+            {props.children}
+        </SSectionDiscriptionStyle>
+        )
+}
+
+const SSectionTitleStyle = styled.div`
+    font-size:2rem;
+    color:${CGray};
+    margin-bottom:24px;
+    margin-left:5%;
+    margin-right:5%;
+    text-align: ${props=>props.right ? 'right' : 'left'};
+
+    @media (min-width: 600px) {
+        font-size:5rem;
+    }
+`
+
+export const SSectionTitle = (props)=>{
+
+    return(
+        <SSectionTitleStyle right={props.right}>
+            {props.children}
+        </SSectionTitleStyle>
+        )
+}
+
+
+const SCreditStyle= styled.div`
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    width:100%;
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items: center;
+    
+    > ul {
+        list-style:none;
+        margin-top:16px;
+
+        > li {
+            > p {
+                font-size:2rem;
+                font-weight:bold;
+                
+                @media (min-width: 600px) {
+                    font-size:3rem;
+                }
+            }
+            
+            > span {
+                font-size:0.8rem;
+                
+                @media (min-width: 600px) {
+                    font-size:1rem;
+                }
+            }
+
+        }
+    }
+`
+
+export const SCredit= ({children})=>{
+    
+    return(
+        <SCreditStyle>
+            {children}
+        </SCreditStyle>
+        )
+}
+
+//ここまで
+
 
 
 export default People
