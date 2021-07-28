@@ -17,7 +17,7 @@ const PageLayout = (props) => {
 }
 
 const SMain = styled.div`
-    font-family: 'Noto Serif JP', serif;
+    
     color:darkslategray;
     max-width:1400px;
     background-color:${props=>props.Backcolor ? props.Backcolor : CWhite};

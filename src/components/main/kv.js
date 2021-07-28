@@ -9,8 +9,37 @@ import {SRdiv} from '../common/div.js'
 import {SSection} from '../common/section.js'
 import {CWhite, CBeige} from '../common/variables.js'
 import {STopX, STopY} from '../common/kvmsg.js'
+import Button from '@material-ui/core/Button';
+
+
+const linkMenu=[
+    {
+        icon:<LocalLibraryIcon/>,
+        text:'wiki',
+        url:'https://rokkotsumikan.com/tagame_wiki/'
+    },
+    {
+        icon:<PageviewIcon/>,
+        text:'news',
+        url:'/news'
+    },
+    {
+        icon:<TwitterIcon/>,
+        text:'twitter',
+        url:'https://twitter.com/tagame_kankou'
+    }
+    ]
+
+const buttonStyle={
+    padding:'0px 2px',
+    margin:'4px 0px',
+    width:'100%',
+    textTransform: "none",
+    fontFamily:'"Yu Mincho", "Merriweather", "Georgia", Cambria, "Times New Roman"'
+}
 
 const Kv = () => {
+    
     return (
         <SSection>
             <Hidden mdUp>
@@ -26,12 +55,23 @@ const Kv = () => {
                         <StaticImage src='../../images/index/kv/top.jpg' alt='top'/>
                         <Hidden smDown>
                             <SLinkwap>
+                                
                                 <Grid container spacing={2} alignItems="center">
                                     <Grid item xs={3}><div>リンク<p style={{margin:'0px', fontSize:'0.7rem'}}>(外部サイト)</p></div></Grid>
-                                    <Grid item xs={3}><SLink><LocalLibraryIcon/><p>wiki</p></SLink></Grid>
-                                    <Grid item xs={3}><SLink><PageviewIcon/><p>News</p></SLink></Grid>
-                                    <Grid item xs={3}><SLink><TwitterIcon/><p>Twitter</p></SLink></Grid>
+                                    {linkMenu.map((item)=>{
+                                        return(
+                                        <Grid item xs={3}>
+                                            <Button style={buttonStyle}>
+                                                <SLink>
+                                                    {item.icon}
+                                                    <p>{item.text}</p>
+                                                </SLink>
+                                            </Button>
+                                        </Grid>
+                                        )
+                                    })}
                                 </Grid>
+                                
                             </SLinkwap>
                         </Hidden>
                     </SRdiv>
@@ -50,9 +90,18 @@ const Kv = () => {
                 <SLinkwap>
                     <Grid container spacing={2} alignItems="center">
                         <Grid item xs={3}><div>リンク<p style={{margin:'0px', fontSize:'0.7rem'}}>(外部サイト)</p></div></Grid>
-                        <Grid item xs={3}><SLink><LocalLibraryIcon/><p>wiki</p></SLink></Grid>
-                        <Grid item xs={3}><SLink><PageviewIcon/><p>ニュース</p></SLink></Grid>
-                        <Grid item xs={3}><SLink><TwitterIcon/><p>Twitter</p></SLink></Grid>
+                        {linkMenu.map((item)=>{
+                            return(
+                            <Grid item xs={3}>
+                                <Button style={{padding:'0px 2px', margin:'4px 0px',width:'100%'}}>
+                                    <SLink>
+                                        {item.icon}
+                                        <p>{item.text}</p>
+                                    </SLink>
+                                </Button>
+                            </Grid>
+                            )
+                        })}
                     </Grid>
                 </SLinkwap>
             </Hidden>
@@ -66,7 +115,7 @@ const Kv = () => {
 const SLinkwap= styled.div`
     text-align:center;
     width:100%;
-    padding:16px;
+    padding:4px 16px;
     
     @media (min-width:960px){
         width:50%;
@@ -80,10 +129,15 @@ const SLinkwap= styled.div`
 const SLink = styled.div`
     background-color:${CBeige};
     padding: 4px 0;
+    width:100%;
     
     > p {
         margin:-8px 0 0 0;
     }
+`
+
+const SInnerDiv=styled.div`
+    width:100
 `
 
 export default Kv
