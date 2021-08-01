@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Seo from "../components/seo"
+import Seo from "../components/common/seo"
 import PageLayout from "../components/pageLayout.js"
 import Kv from "../components/main/kv.js"
 import Nature from "../components/main/nature.js"

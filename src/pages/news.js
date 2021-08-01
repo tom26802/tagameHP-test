@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from 'styled-components';
 
 import Layout from "../components/blogLayout"
-import Seo from "../components/seo"
+import Seo from "../components/common/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = "田瓶ニュース"

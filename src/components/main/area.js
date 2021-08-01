@@ -1,12 +1,16 @@
 import React from "react"
 import styled from 'styled-components';
+import { StaticImage } from "gatsby-plugin-image"
+
 import {Grid } from '@material-ui/core';
+
 import {SSection, SCopy} from '../common/section.js'
 import {SSideTitle} from '../common/sidetitle.js'
-import { StaticImage } from "gatsby-plugin-image"
+import {FadeContent} from '../common/motion.js'
 
 const Area = () => {
     return (
+        <FadeContent>
         <SSection>
             <h1>田瓶の地を知る</h1>
             <Grid container>
@@ -17,7 +21,8 @@ const Area = () => {
                         大正時代から残るレトロな街並みもコアな魅力のひとつ
                     </SCopy>
                     <Grid container>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={1} />
+                        <Grid item xs={12} md={5}>
                             <StaticImage src="../../images/index/area/map.png" alt="map"/>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -64,8 +69,8 @@ const Area = () => {
                     </SSideTitle>
                 </Grid>
             </Grid>
-
         </SSection>
+        </FadeContent>
     )
 }
 

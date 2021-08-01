@@ -1,16 +1,18 @@
 import React from "react"
 import styled from 'styled-components';
+import { StaticImage } from "gatsby-plugin-image"
+
 import {Grid, Hidden } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PageviewIcon from '@material-ui/icons/Pageview';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
-import { StaticImage } from "gatsby-plugin-image"
+
 import {SRdiv} from '../common/div.js'
 import {SSection} from '../common/section.js'
 import {CWhite, CBeige} from '../common/variables.js'
 import {STopX, STopY} from '../common/kvmsg.js'
-import Button from '@material-ui/core/Button';
-
+import {FadeContent} from '../common/motion.js'
 
 const linkMenu=[
     {
@@ -30,17 +32,10 @@ const linkMenu=[
     }
     ]
 
-const buttonStyle={
-    padding:'0px 2px',
-    margin:'4px 0px',
-    width:'100%',
-    textTransform: "none",
-    fontFamily:'"Yu Mincho", "Merriweather", "Georgia", Cambria, "Times New Roman"'
-}
-
 const Kv = () => {
     
     return (
+        <FadeContent>
         <SSection>
             <Hidden mdUp>
                 <STopX>
@@ -55,18 +50,17 @@ const Kv = () => {
                         <StaticImage src='../../images/index/kv/top.jpg' alt='top'/>
                         <Hidden smDown>
                             <SLinkwap>
-                                
                                 <Grid container spacing={2} alignItems="center">
                                     <Grid item xs={3}><div>リンク<p style={{margin:'0px', fontSize:'0.7rem'}}>(外部サイト)</p></div></Grid>
                                     {linkMenu.map((item)=>{
                                         return(
                                         <Grid item xs={3}>
-                                            <Button style={buttonStyle}>
+                                            <SButton href={item.url}>
                                                 <SLink>
                                                     {item.icon}
                                                     <p>{item.text}</p>
                                                 </SLink>
-                                            </Button>
+                                            </SButton>
                                         </Grid>
                                         )
                                     })}
@@ -93,12 +87,12 @@ const Kv = () => {
                         {linkMenu.map((item)=>{
                             return(
                             <Grid item xs={3}>
-                                <Button style={{padding:'0px 2px', margin:'4px 0px',width:'100%'}}>
+                                <SButton>
                                     <SLink>
                                         {item.icon}
                                         <p>{item.text}</p>
                                     </SLink>
-                                </Button>
+                                </SButton>
                             </Grid>
                             )
                         })}
@@ -106,6 +100,7 @@ const Kv = () => {
                 </SLinkwap>
             </Hidden>
         </SSection>
+        </FadeContent>
     )
 }
 
@@ -136,8 +131,12 @@ const SLink = styled.div`
     }
 `
 
-const SInnerDiv=styled.div`
-    width:100
+const SButton=styled(Button)`
+    padding:0px 2px;
+    margin:4px 0px;
+    width:100%;
+    text-transform: none;
+    font-family:"Yu Mincho", "Merriweather", "Georgia", Cambria, "Times New Roman";
 `
 
 export default Kv

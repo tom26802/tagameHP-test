@@ -6,6 +6,8 @@ export const CBeige='#DAD2D3'
 export const CGray='#4B4E5F'
 export const CNavy='#1A2636'
 export const CBlack='#1C1D22'
+export const CRed='#DD4800'
+export const CBrown='#9D463D'
 
 export const fontStyle={
     fontFamily: '"Yu Mincho", "Merriweather", "Georgia", Cambria, "Times New Roman"',

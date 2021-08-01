@@ -1,13 +1,17 @@
 import React from "react"
 import styled from 'styled-components';
+import { StaticImage } from "gatsby-plugin-image"
+
 import {Grid} from '@material-ui/core';
+
 import {CBlack} from '../common/variables.js'
 import {SSection} from '../common/section.js'
 import {SRdiv, SAdiv, SCover} from '../common/div.js'
-import { StaticImage } from "gatsby-plugin-image"
+import {FadeContent} from '../common/motion.js'
 
 const Nature = () => {
     return (
+        <FadeContent>
         <SSection>
             <h1>田瓶の情景</h1>
             <Grid container>
@@ -67,6 +71,7 @@ const Nature = () => {
                 </Grid>
             </Grid>
         </SSection>
+        </FadeContent>
     )
 }
 

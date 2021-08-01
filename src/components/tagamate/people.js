@@ -1,9 +1,13 @@
 import React from "react"
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+
 import {Grid } from '@material-ui/core'
+
 import {SSection, SCopy} from '../common/section.js'
 import {SSideTitle} from '../common/sidetitle.js'
+import {FadeContent} from '../common/motion.js'
+
 import Img1 from '../../images/index/people/yago.jpg'
 import Img2 from '../../images/index/people/etori.jpg'
 import Img3 from '../../images/index/people/hashimoto.jpg'
@@ -16,6 +20,8 @@ import Img9 from '../../images/index/people/watabe.jpg'
 import Img10 from '../../images/index/people/murata.jpg'
 import Img11 from '../../images/index/people/watarai.jpg'
 import Img12 from '../../images/index/people/hosokawa.jpg'
+
+
 
 const Tagamates = [
     {
@@ -84,7 +90,7 @@ const Tagamates = [
     {
         img:Img10,
         title:'山野辺総合病院医師',
-        message:'対話から生まれる信頼',
+        message:'対話から信頼を',
         name:'村田 桔平',
         roman:'Kippei Murata'
     },
@@ -107,7 +113,9 @@ const Tagamates = [
 const Tagamate = ({img, title, message, name, roman})=>{
     console.log(img)
     return(
+
         <Grid item xs={12} sm={6} lg={4}>
+        <FadeContent>
             <Link to={`/tagamate/${roman.split(' ').pop()}/`}>
                 <SPeopleWrap>
                     <img src={img} alt={roman}/>
@@ -116,12 +124,14 @@ const Tagamate = ({img, title, message, name, roman})=>{
                         <span>{name}</span><i>{roman}</i>
                 </SPeopleWrap>
             </Link>
+        </FadeContent>
         </Grid>
     )
 } 
 
 const People= () => {
     return (
+        <FadeContent>
         <SSection right>
             <h1>田瓶の人に会う</h1>
             <Grid container>
@@ -147,9 +157,9 @@ const People= () => {
                         })}
                     </Grid>
                 </Grid>
-
             </Grid>
         </SSection>
+        </FadeContent>
     )
 }
 

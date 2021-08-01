@@ -1,17 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+import clsx from 'clsx';
+
+
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import {Hidden } from '@material-ui/core';
-import NaviMenu from './header/navimenu.js'
-import {menus, tour} from './header/links.js'
-import {fontStyle} from './common/variables.js'
 import Typography from "@material-ui/core/Typography";
-
-import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
-
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -19,18 +17,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LinkIcon from '@material-ui/icons/Link';
 
+import NaviMenu from '../header/navimenu.js'
+import {menus, tour} from '../header/links.js'
+import {fontStyle} from './variables.js'
+
+
 
 // Style定義
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
     list: {
     width: 250,
   },
@@ -105,19 +99,19 @@ export default function Header() {
   );
   
   return (
-    <div className={classes.root}>
+    <div style={{flexGrow: '1'}}>
       <div position="static">
         <Toolbar>
-          <div className={classes.title}>
+          <div style={{flexGrow: '1'}}>
             田瓶市観光情報局
           </div>
         <Hidden smDown>
           {menus.map((item)=>(<NaviMenu key={item.menu} name={item.menu} path={item.path} />))}
         </Hidden>
         <Hidden mdUp>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={toggleDrawer('right', true)}>
+          <SIconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer('right', true)}>
               <MenuIcon />
-          </IconButton>
+          </SIconButton>
         </Hidden>
         </Toolbar>
       </div>
@@ -128,3 +122,6 @@ export default function Header() {
   );
 }
 
+const SIconButton = styled(IconButton)`
+  SmarginRight: theme.spacing(2),
+`

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
-import Header from "./header.js"
-import Footer from "./footer.js"
+import Header from "./common/header.js"
+import Footer from "./common/footer.js"
 import {CWhite, CBlack} from './common/variables.js'
 
 const PageLayout = (props) => {
@@ -17,7 +17,7 @@ const PageLayout = (props) => {
 }
 
 const SMain = styled.div`
-    
+    font-family: 'Noto Serif JP', serif;
     color:darkslategray;
     max-width:1400px;
     background-color:${props=>props.Backcolor ? props.Backcolor : CWhite};

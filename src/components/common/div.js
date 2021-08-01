@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const SRdiv = styled.div`
     width:100%;
     position:relative;
-    height:100%;
 `
 export const SAdiv = styled.div`
     position:absolute;
@@ -19,5 +18,5 @@ export const SCover = styled.div`
     width:100%;
     top:0;
     left:0;
-    background:rgba(0, 0, 0, 0.5);
+    background:${props=>props.white ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'};
 `

@@ -1,7 +1,9 @@
 import React from "react"
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+
 import {Grid } from '@material-ui/core';
+
 import {SSideTitle} from '../common/sidetitle.js'
 import {SSection, SCopy} from '../common/section.js'
 import Img1 from '../../images/index/people/yago.jpg'
@@ -10,6 +12,7 @@ import Img3 from '../../images/index/people/hashimoto.jpg'
 import Img4 from '../../images/index/people/kimura.jpg'
 import Img5 from '../../images/index/people/oizumi.jpg'
 import Img6 from '../../images/index/people/tanigawa.jpg'
+import {FadeContent} from '../common/motion.js'
 
 const Tagamates = [
     {
@@ -60,6 +63,7 @@ const Tagamate = ({img, title, message, name, roman})=>{
 
     return(
         <Grid item xs={12} sm={6} lg={4}>
+            <FadeContent>
             <Link to={`/tagamate/${roman.split(' ').pop()}/`}>
                 <SPeopleWrap>
                     <img src={img} alt={roman}/>
@@ -68,6 +72,7 @@ const Tagamate = ({img, title, message, name, roman})=>{
                         <span>{name}</span><i>{roman}</i>
                 </SPeopleWrap>
             </Link>
+            </FadeContent>
         </Grid>
     )
 } 
@@ -75,6 +80,7 @@ const Tagamate = ({img, title, message, name, roman})=>{
 
 const People= () => {
     return (
+        <FadeContent>
         <SSection right>
             <h1>田瓶の人に会う</h1>
             <Grid container>
@@ -102,6 +108,7 @@ const People= () => {
                 </Grid>
             </Grid>
         </SSection>
+        </FadeContent>
     )
 }
 

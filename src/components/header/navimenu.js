@@ -1,20 +1,19 @@
 import React from 'react';
-import Popover from "@material-ui/core/Popover";
 import styled from 'styled-components';
-import Button from '@material-ui/core/Button';
 import { Link } from 'gatsby';
-import {tour} from './links.js'
-import Typography from "@material-ui/core/Typography";
-import {fontStyle} from '../common/variables.js'
 
 import List from '@material-ui/core/List';
+import Popover from "@material-ui/core/Popover";
+import Button from '@material-ui/core/Button';
+import Typography from "@material-ui/core/Typography";
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MapIcon from '@material-ui/icons/Map';
 
-
+import {fontStyle} from '../common/variables.js'
+import {tour} from './links.js'
 
 const NaviMenu = ({name, path})=>{
   
@@ -62,7 +61,7 @@ const NaviMenu = ({name, path})=>{
                             <Divider />
                             <ListItem button component="a" href={"/info"}>
                                 <ListItemIcon><MapIcon/></ListItemIcon>
-                                <ListItemText primary={<Typography style={fontStyle}>田瓶の成り立ち</Typography>} />
+                                <ListItemText primary={<Typography style={fontStyle}>田瓶の見どころ</Typography>} />
                             </ListItem>
                     </List>
               </SPopover>

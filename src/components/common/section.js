@@ -3,8 +3,9 @@ import {CGray} from './variables.js'
 
 export const SSection=styled.div`
     position:relative;
-    padding-top:80px;
+    padding-top:50px;
     paddingBottom:40px;
+    background-color: ${props=>props.white ? 'white' : ''};
     
     > h1 {
             font-family: 'Noto Serif JP', serif;

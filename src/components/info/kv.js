@@ -5,7 +5,7 @@ import {SSection } from '../common/section.js'
 import {STopX, STopY } from '../common/kvmsg.js'
 import {FadeContent} from '../common/motion.js'
 
-import Img1 from '../../images/tagamate/tagamate.jpg'
+import Img1 from '../../images/info/info.jpg'
 
 
 const Kv = () => {
@@ -14,9 +14,10 @@ const Kv = () => {
         <SSection>
             <Hidden mdUp>
                 <STopX>
-                    <p>人と人とが触れ合うと</p>
-                    <p>いつしか暖かい街になる</p>
-                    <div>人通じて知る世界</div>
+                    <p>ふらっと立ち寄る一人旅み</p>
+                    <p>大切な人と訪れる二人旅</p>
+                    <p>家族と、仲間と、思い出作り</p>
+                    <div>かみさまのすむまち、田瓶</div>
                 </STopX>
             </Hidden>
             <Grid container>
@@ -26,9 +27,10 @@ const Kv = () => {
                 <Hidden smDown>
                     <Grid item sm={3}>
                         <STopY>
-                            <p>人と人とが触れ合うと</p>
-                            <p>いつしか暖かい街になる</p>
-                            <div> 人を通じて知る世界</div>
+                            <p>ふらっと立ち寄る一人旅み</p>
+                            <p>大切な人と訪れる二人旅</p>
+                            <p>家族と、仲間と、思い出作り</p>
+                            <div> 神様のすむまち、田瓶</div>
                         </STopY>
                     </Grid>
                 </Hidden>
