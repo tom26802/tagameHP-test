@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link, } from "gatsby"
 import Seo from "../components/common/seo"
 import PageLayout from "../components/pageLayout.js"
 import Kv from "../components/info/kv.js"

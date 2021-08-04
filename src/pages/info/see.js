@@ -1,23 +1,18 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import Seo from "../components/common/seo"
-import PageLayout from "../components/pageLayout.js"
-import Kv from "../components/main/kv.js"
-import Nature from "../components/main/nature.js"
-import Tour from "../components/main/tour.js"
-import People from "../components/main/people.js"
-import Area from "../components/main/area.js"
+import Seo from "../../components/common/seo"
+import PageLayout from "../../components/pageLayout.js"
+
+import Kv from "../../components/info/see/kv.js"
+import See from "../../components/info/see/see.js"
 
 const Home = () => {
 
   return (
     <PageLayout>
         <Seo title="Tagame City Tourism Association" />
-        <Kv />
-        <Nature />
-        <Tour/>
-        <People/>
-        <Area/>
+            <Kv/>
+            <See />
         <div style={{height:'100px'}} />
     </PageLayout>
   )

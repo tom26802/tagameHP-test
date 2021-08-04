@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 import {Grid } from '@material-ui/core';
 
@@ -25,54 +26,74 @@ const Tour= () => {
                     </SCopy>
                     </FadeContent>
                     <FadeContent>
-                    <SMenu>
-                        <StaticImage src='../../images/index/tour/tour_1_see.jpg' alt="see"/>
-                        <SCover />
-                        <SMenuMessage>
-                            <span>SightSeeing</span>
-                            <p>見る・遊ぶ</p>
-                        </SMenuMessage>
-                    </SMenu>
+                    <Link to='/info/see'>
+                        <SMenu>
+                            <SHov>
+                                <StaticImage src='../../images/index/tour/tour_1_see.jpg' alt="see"/>
+                            </SHov>
+                            <SCover />
+                            <SMenuMessage>
+                                <span>SightSeeing</span>
+                                <p>見る・遊ぶ</p>
+                            </SMenuMessage>
+                        </SMenu>
+                    </Link>
                     </FadeContent>
                     <FadeContent>
-                    <SMenu>
-                        <StaticImage src='../../images/index/tour/tour_2_activty.jpg' alt="act"/>
-                        <SCover />
-                        <SMenuMessage>
-                            <span>Activity</span>
-                            <p>遊ぶ・体験する</p>
-                        </SMenuMessage>
-                    </SMenu>
+                    <Link to='/info/act'>
+                        <SMenu>
+                            <SHov>
+                                <StaticImage src='../../images/index/tour/tour_2_activty.jpg' alt="act"/>
+                            </SHov>
+                            <SCover />
+                            <SMenuMessage>
+                                <span>Activity</span>
+                                <p>遊ぶ・体験する</p>
+                            </SMenuMessage>
+                        </SMenu>
+                    </Link>
                     </FadeContent>
                     <FadeContent>
-                    <SMenu>
-                        <StaticImage src='../../images/index/tour/tour_3_food.jpg' alt="food"/>
-                        <SCover />
-                        <SMenuMessage>
-                            <span>Goumet & Souvenir</span>
-                            <p>食べる・お土産</p>
-                        </SMenuMessage>
-                    </SMenu>
+                    <Link to='/info/food'>
+                        <SMenu>
+                            <SHov>
+                                <StaticImage src='../../images/index/tour/tour_3_food.jpg' alt="food"/>
+                            </SHov>
+                            <SCover />
+                            <SMenuMessage>
+                                <span>Goumet & Souvenir</span>
+                                <p>食べる・お土産</p>
+                            </SMenuMessage>
+                        </SMenu>
+                    </Link>
                     </FadeContent>
                     <FadeContent>
-                    <SMenu>
-                        <StaticImage src='../../images/index/tour/tour_4_hotel.jpg' alt="hotel"/>
-                        <SCover />
-                        <SMenuMessage>
-                            <span>Hotel & Spa</span>
-                            <p>泊まる・温泉</p>
-                        </SMenuMessage>
-                    </SMenu>
+                    <Link to='/info/hotel'>
+                        <SMenu>
+                            <SHov>
+                                <StaticImage src='../../images/index/tour/tour_4_hotel.jpg' alt="hotel"/>
+                            </SHov>
+                            <SCover />
+                            <SMenuMessage>
+                                <span>Hotel & Spa</span>
+                                <p>泊まる・温泉</p>
+                            </SMenuMessage>
+                        </SMenu>
+                    </Link>
                     </FadeContent>
                     <FadeContent>
-                    <SMenu>
-                        <StaticImage src='../../images/index/tour/tour_5_event.jpg' alt="event"/>
-                        <SCover />
-                        <SMenuMessage>
-                            <span>Events</span>
-                            <p>お祭り・催事</p>
-                        </SMenuMessage>
-                    </SMenu>
+                    <Link to='/info/event'>
+                        <SMenu>
+                            <SHov>
+                                <StaticImage src='../../images/index/tour/tour_5_event.jpg' alt="event"/>
+                            </SHov>
+                            <SCover />
+                            <SMenuMessage>
+                                <span>Events</span>
+                                <p>お祭り・催事</p>
+                            </SMenuMessage>
+                        </SMenu>
+                    </Link>
                     </FadeContent>
                 </Grid>
                 <Grid item xs={3}>
@@ -94,6 +115,19 @@ const SMenu=styled.div`
     margin-left:20%;
     margin-bottom:15px;
     position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    
+    :hover &{}
+`
+
+const SHov=styled.div`
+    transition:1s;
+    
+    ${SMenu}:hover &{
+        transform:scale(1.2,1.2);
+        transition:1s;
+    }
 `
 
 const SMenuMessage=styled.div`

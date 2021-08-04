@@ -112,6 +112,7 @@ const SLinkwap= styled.div`
     width:100%;
     padding:4px 16px;
     
+    
     @media (min-width:960px){
         width:50%;
         background-color:${CWhite};
@@ -125,7 +126,8 @@ const SLink = styled.div`
     background-color:${CBeige};
     padding: 4px 0;
     width:100%;
-    
+    border-radius:8px;
+        
     > p {
         margin:-8px 0 0 0;
     }

@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Header from "./common/header.js"
 import Footer from "./common/footer.js"
 import styled from 'styled-components'

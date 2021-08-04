@@ -202,9 +202,18 @@ const SLink =styled.div`
     color:${CBrown};
     font-weight:bold;
     border: 1px solid ${CBrown};
-    background-color:white;
     border-radius:20px;
+    background-color:transparent;
     padding:6px 16px;
+    position:relative;
+    transition:0.3s;
+    cursor: pointer;
+    
+    :hover{
+        color:white;
+        background-color:${CBrown};
+    }
+
     }
 `
 
