@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import fontStyle from "./variables.js"
 
 
 export const SSpotWrap = styled.div`
@@ -13,9 +12,10 @@ export const SSpotTitle = styled.div`
     width:100%;
     font-size:2rem;
     text-align:center;
+    font-weight:bold;
     padding:8px;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
     border-color: ${props=>props.color ? props.color : 'black'};
     color:${props=>props.color ? props.color : 'black'};
 `
@@ -26,6 +26,11 @@ export const SSpotContent=styled.div`
     > div {
         font-size:1.5rem;
         font-weight:bold;
+    }
+    
+    > p {
+        margin-top:16px;
+        font-size:0.9rem;
     }
 `
 

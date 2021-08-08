@@ -13,21 +13,21 @@ const Kv = () => {
         <SSection>
             <Hidden mdUp>
                 <STopX>
-                    <p>積み重なる歴史</p>
-                    <p>過去に学び、未来に生かす</p>
-                    <div>田瓶を見る、学ぶ</div>
+                    <p>少年の日の思い出に</p>
+                    <p>少年に戻れる一瞬を</p>
+                    <div>田瓶を遊びつくす</div>
                 </STopX>
             </Hidden>
             <Grid container>
                 <Grid item xs={12} md={9}>
-                    <StaticImage src='../../../images/info/see/tour-see2.jpg' alt="top"　style={{width:'100%'}}/>
+                    <StaticImage src='../../../images/info/act/tour2-act.jpg' alt="top"　style={{width:'100%'}}/>
                 </Grid>
                 <Hidden smDown>
                     <Grid item sm={3}>
                         <STopY>
-                            <p>積み重なる歴史</p>
-                            <p>過去に学び、未来に生かす</p>
-                            <div> 田瓶を見る、学ぶ</div>
+                            <p>少年の日の思い出に</p>
+                            <p>少年に戻れる一瞬を</p>
+                            <div> 田瓶を遊びつくす</div>
                         </STopY>
                     </Grid>
                 </Hidden>
