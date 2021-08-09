@@ -6,12 +6,12 @@ import {Grid } from '@material-ui/core';
 
 import {SSideTitle} from '../common/sidetitle.js'
 import {SSection, SCopy} from '../common/section.js'
-import Img1 from '../../images/index/people/yago.jpg'
-import Img2 from '../../images/index/people/etori.jpg'
-import Img3 from '../../images/index/people/hashimoto.jpg'
-import Img4 from '../../images/index/people/kimura.jpg'
-import Img5 from '../../images/index/people/oizumi.jpg'
-import Img6 from '../../images/index/people/tanigawa.jpg'
+import Img1 from '../../images/index/people/yago.webp'
+import Img2 from '../../images/index/people/etori.webp'
+import Img3 from '../../images/index/people/hashimoto.webp'
+import Img4 from '../../images/index/people/kimura.webp'
+import Img5 from '../../images/index/people/oizumi.webp'
+import Img6 from '../../images/index/people/tanigawa.webp'
 import {FadeContent} from '../common/motion.js'
 
 const Tagamates = [

@@ -29,7 +29,7 @@ const Tour= () => {
                     <Link to='/info/see'>
                         <SMenu>
                             <SHov>
-                                <StaticImage src='../../images/index/tour/tour_1_see.jpg' alt="see"/>
+                                <StaticImage src='../../images/index/tour/tour_1_see.webp' alt="see"/>
                             </SHov>
                             <SCover />
                             <SMenuMessage>
@@ -43,7 +43,7 @@ const Tour= () => {
                     <Link to='/info/act'>
                         <SMenu>
                             <SHov>
-                                <StaticImage src='../../images/index/tour/tour_2_activty.jpg' alt="act"/>
+                                <StaticImage src='../../images/index/tour/tour_2_activty.webp' alt="act"/>
                             </SHov>
                             <SCover />
                             <SMenuMessage>
@@ -57,7 +57,7 @@ const Tour= () => {
                     <Link to='/info/food'>
                         <SMenu>
                             <SHov>
-                                <StaticImage src='../../images/index/tour/tour_3_food.jpg' alt="food"/>
+                                <StaticImage src='../../images/index/tour/tour_3_food.webp' alt="food"/>
                             </SHov>
                             <SCover />
                             <SMenuMessage>
@@ -71,7 +71,7 @@ const Tour= () => {
                     <Link to='/info/hotel'>
                         <SMenu>
                             <SHov>
-                                <StaticImage src='../../images/index/tour/tour_4_hotel.jpg' alt="hotel"/>
+                                <StaticImage src='../../images/index/tour/tour_4_hotel.webp' alt="hotel"/>
                             </SHov>
                             <SCover />
                             <SMenuMessage>
@@ -85,7 +85,7 @@ const Tour= () => {
                     <Link to='/info/event'>
                         <SMenu>
                             <SHov>
-                                <StaticImage src='../../images/index/tour/tour_5_event.jpg' alt="event"/>
+                                <StaticImage src='../../images/index/tour/tour_5_event.webp' alt="event"/>
                             </SHov>
                             <SCover />
                             <SMenuMessage>

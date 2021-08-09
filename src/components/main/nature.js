@@ -18,12 +18,12 @@ const Nature = () => {
                 <Grid item xs={12} md={8}>
                     <SRdiv>
                         <Grid container>
-                            <Grid item xs={6}><StaticImage src='../../images/index/nature/step.jpg' alt="river"/></Grid>
-                            <Grid item xs={6}><StaticImage src='../../images/index/nature/flower.jpg' alt="flower"/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/step.webp' alt="river"/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/flower.webp' alt="flower"/></Grid>
                         </Grid>
                         <Grid container>
-                            <Grid item xs={6}><StaticImage src='../../images/index/nature/cat.jpg' alt="cat"/></Grid>
-                            <Grid item xs={6}><StaticImage src='../../images/index/nature/river.jpg' alt="cat"/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/cat.webp' alt="cat"/></Grid>
+                            <Grid item xs={6}><StaticImage src='../../images/index/nature/river.webp' alt="river"/></Grid>
                         </Grid>
                         <SCover/>
                         <Skv>

@@ -47,7 +47,7 @@ const Kv = () => {
             <Grid container>
                 <Grid item xs={12} md={10}>
                     <SRdiv>
-                        <StaticImage src='../../images/index/kv/top.jpg' alt='top'/>
+                        <StaticImage src='../../images/index/kv/top.webp' alt='top'/>
                         <Hidden smDown>
                             <SLinkwap>
                                 <Grid container spacing={2} alignItems="center">

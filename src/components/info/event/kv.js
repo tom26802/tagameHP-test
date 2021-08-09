@@ -20,7 +20,7 @@ const Kv = () => {
             </Hidden>
             <Grid container>
                 <Grid item xs={12} md={9}>
-                    <StaticImage src='../../../images/info/event/tourt-event.jpg' alt="top"　style={{width:'100%'}}/>
+                    <StaticImage src='../../../images/info/event/tourt-event.webp' alt="top"　style={{width:'100%'}}/>
                 </Grid>
                 <Hidden smDown>
                     <Grid item sm={3}>
