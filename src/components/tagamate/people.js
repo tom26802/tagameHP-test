@@ -18,8 +18,8 @@ import Img7 from '../../images/index/people/iida.jpg'
 import Img8 from '../../images/index/people/urakawa.jpg'
 import Img9 from '../../images/index/people/watabe.jpg'
 import Img10 from '../../images/index/people/murata.jpg'
-import Img11 from '../../images/index/people/watarai.jpg'
-import Img12 from '../../images/index/people/hosokawa.jpg'
+import Img11 from '../../images/index/people/utakata.jpg'
+import Img12 from '../../images/index/people/sakurai.jpg'
 
 
 
@@ -75,7 +75,7 @@ const Tagamates = [
     },
     {
         img:Img8,
-        title:'毛総新聞　編集部',
+        title:'毛総新聞　文化部',
         message:'活字に命を吹き込む',
         name:'浦川 麗子',
         roman:'Reiko Urakawa'
@@ -98,15 +98,15 @@ const Tagamates = [
         img:Img11,
         title:'小説家、評論家',
         message:'動画より鮮やかに',
-        name:'渡会 理砂',
-        roman:'Risa Watarai'
+        name:'UTAKATA',
+        roman:'Utakata'
     },
     {
         img:Img12,
         title:'フォーリッジ事業統括',
         message:'人工知能の活用',
-        name:'マイケル　岸田',
-        roman:'Michael Kishida'
+        name:'ジェフ サクライ',
+        roman:'Jeff Sakurai'
     }
     ]
 

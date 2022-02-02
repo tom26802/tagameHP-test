@@ -56,62 +56,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 
 // tagamete各人のページの生成
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
 
-  const tagamatePost= path.resolve(`./src/templates/tagamate.js`)
-
-  // Get all markdown blog posts sorted by date
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              templateKey
-            }
-          }
-        }
-      }
-    `
-  )
-
-  if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
-      result.errors
-    )
-    return
-  }
-
-  const posts = result.data.allMarkdownRemark.nodes
-
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
-
-  if (posts.length > 0) {
-    
-      posts.forEach((post) => {
-      if (post.frontmatter.templateKey === 'tagamate') {
-        createPage({
-          path: `/tagamate/${post.fields.slug.split('/')[3]}`,
-          component:  tagamatePost,
-          context: {
-            id: post.id,
-          },
-        })
-      }
-    })
-  }
-}
+//ここまで
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
