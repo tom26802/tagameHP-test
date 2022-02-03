@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import clsx from 'clsx';
-
+import { Link } from 'gatsby';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -66,10 +66,12 @@ export default function Header() {
       <List>
         {menus.map((item)=>{
           return(
-          <ListItem button key={item.menu}>
-            <ListItemIcon>{item.icon}</ListItemIcon>
-            <ListItemText primary={<Typography style={fontStyle}>{item.menu}</Typography>} />
-          </ListItem>
+          <Link to={'/'+item.path}>
+            <ListItem button key={item.menu}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={<Typography style={fontStyle}>{item.menu}</Typography>} />
+            </ListItem>
+          </Link>
           )
         })}
       </List>
@@ -78,22 +80,17 @@ export default function Header() {
       
       <List>
         {tour.map((item)=>{
-          console.log(item.menu)
           return(
-          <ListItem button key={item.menu}>
-            <ListItemIcon>{item.icon}</ListItemIcon>
-            <ListItemText primary={<Typography style={fontStyle}>{item.menu}</Typography>} />
-          </ListItem>
+          <Link to={'/'+item.path}>
+            <ListItem button key={item.menu}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={<Typography style={fontStyle}>{item.menu}</Typography>} />
+            </ListItem>
+          </Link>
           )
         })}
 
       </List>
-      
-      <Divider />
-          <ListItem button>
-            <ListItemIcon><LinkIcon/></ListItemIcon>
-            <ListItemText primary={<Typography style={fontStyle}>関連サイト</Typography>} />
-          </ListItem>
 
     </div>
   );

@@ -22,6 +22,7 @@ module.exports = {
         name: `blog`,
       },
     },
+/*
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,6 +37,7 @@ module.exports = {
         name: `tagamate`,
       },
     },
+*/
     {
       resolve: `gatsby-source-filesystem`,
       options: {
