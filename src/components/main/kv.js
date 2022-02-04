@@ -87,7 +87,7 @@ const Kv = () => {
                         {linkMenu.map((item)=>{
                             return(
                             <Grid item xs={3}>
-                                <SButton>
+                                <SButton href={item.url}>
                                     <SLink>
                                         {item.icon}
                                         <p>{item.text}</p>

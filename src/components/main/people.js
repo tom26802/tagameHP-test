@@ -80,11 +80,12 @@ const Tagamate = ({img, title, message, name, roman})=>{
 
 const People= () => {
     return (
-        <FadeContent>
+
         <SSection right>
             <h1>田瓶の人に会う</h1>
             <Grid container>
                 <Grid item xs={3}>
+
                     <SSideTitle>
                         <ul>
                             <li><p>独特の文化が育む人間模様</p></li>
@@ -108,7 +109,7 @@ const People= () => {
                 </Grid>
             </Grid>
         </SSection>
-        </FadeContent>
+
     )
 }
 

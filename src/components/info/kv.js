@@ -14,10 +14,10 @@ const Kv = () => {
         <SSection>
             <Hidden mdUp>
                 <STopX>
-                    <p>ふらっと立ち寄る一人旅み</p>
+                    <p>ふらっと立ち寄る一人旅</p>
                     <p>大切な人と訪れる二人旅</p>
                     <p>家族と、仲間と、思い出作り</p>
-                    <div>かみさまのすむまち、田瓶</div>
+                    <div>神様に会いに行こう</div>
                 </STopX>
             </Hidden>
             <Grid container>
