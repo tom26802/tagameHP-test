@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { paginate } = require(`gatsby-awesome-pagination`)
 
 // Blogページの生成 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -35,6 +36,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+
+  paginate({
+    createPage,
+    items: posts,
+    itemsPerPage: 10,
+    pathPrefix: "/news",
+    component: path.resolve('src/templates/news.js')
+  })
 
   if (posts.length > 0) {  
     posts.forEach((post, index) => {
